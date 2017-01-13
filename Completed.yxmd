@@ -1,0 +1,730 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=alteryx|Select * From uk_customer_data</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=alteryx
+Table=Select * From uk_customer_data</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Customer ID" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Int32" />
+            <Field name="Store Number" size="254" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_String" />
+            <Field name="Customer Segment" size="254" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_String" />
+            <Field name="Responder" size="3" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="String" />
+            <Field name="Name" size="254" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_String" />
+            <Field name="Address" size="254" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_String" />
+            <Field name="Postcode" size="254" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_String" />
+            <Field name="CustomerType" size="2" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="V_WString" />
+            <Field name="AverageTransaction" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Double" />
+            <Field name="LastTransactionAmount" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Double" />
+            <Field name="TransactionsPerYear" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Double" />
+            <Field name="Income" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Double" />
+            <Field name="HomeValue" source="File: odbc:DSN=alteryx|Select * From uk_customer_data" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="342" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_13032_c628b9adf9c0470ca35bac70894a9b73_\Engine_11576_72492da6401941f39246d5f2eb13856d_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="Customer ID" selected="True" rename="Customer_ID" />
+            <SelectField field="Store Number" selected="True" rename="Store_Number" />
+            <SelectField field="CustomerType" selected="False" />
+            <SelectField field="AverageTransaction" selected="False" />
+            <SelectField field="LastTransactionAmount" selected="False" />
+            <SelectField field="TransactionsPerYear" selected="False" />
+            <SelectField field="Income" selected="False" />
+            <SelectField field="HomeValue" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\njewell\Desktop\UK Demo\Transactions.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Transactions.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Customer_ID" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Order_ID" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Order_Priority" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Discount" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Unit_Price" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Quantity_ordered_new" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Order_Date" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Ship_Date" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Shipping_Cost" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Ship_Mode" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Product_Category" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Product_Sub-Category" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Product_Container" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Product_Base_Margin" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Profit" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="150" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Customer_ID" selected="True" />
+            <Field field="Order_ID" selected="True" />
+            <Field field="Order_Priority" selected="True" />
+            <Field field="Discount" selected="True" />
+            <Field field="Unit_Price" selected="True" />
+            <Field field="Quantity_ordered_new" selected="True" />
+            <Field field="Order_Date" selected="True" />
+            <Field field="Ship_Date" selected="True" />
+            <Field field="Shipping_Cost" selected="True" />
+            <Field field="Ship_Mode" selected="True" />
+            <Field field="Product_Category" selected="True" />
+            <Field field="Product_Sub-Category" selected="True" />
+            <Field field="Product_Container" selected="True" />
+            <Field field="Product_Base_Margin" selected="True" />
+            <Field field="Profit" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Customer_ID" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Int16" />
+            <Field name="Order_ID" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Int32" />
+            <Field name="Order_Priority" size="13" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Discount" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Double" />
+            <Field name="Unit_Price" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Double" />
+            <Field name="Quantity_ordered_new" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Byte" />
+            <Field name="Order_Date" size="10" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="String" />
+            <Field name="Ship_Date" size="10" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="String" />
+            <Field name="Shipping_Cost" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Double" />
+            <Field name="Ship_Mode" size="14" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="String" />
+            <Field name="Product_Category" size="15" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="String" />
+            <Field name="Product_Sub-Category" size="30" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="V_String" />
+            <Field name="Product_Container" size="10" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="String" />
+            <Field name="Product_Base_Margin" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Double" />
+            <Field name="Profit" source="File: C:\Users\njewell\Desktop\UK Demo\Transactions.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="354" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField field="Spend" type="Double" size="8" expression="[Unit_Price]*[Quantity_ordered_new]" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Spend=[Unit_Price]*[Quantity_ordered_new]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="462" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Customer_ID" action="GroupBy" rename="Customer_ID" />
+            <SummarizeField field="Spend" action="Sum" rename="Total Spend" />
+            <SummarizeField field="Order_ID" action="Count" rename="Total Transactions" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="582" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Customer_ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Customer_ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Right_Customer_ID" selected="False" rename="Right_Customer_ID" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="PortfolioPluginsGui.Geocoder.Geocoder">
+        <Position x="690" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputFields>
+            <Address>Address</Address>
+            <PostCode>Postcode</PostCode>
+            <SelectedGeocoder>SrcCentroidUK</SelectedGeocoder>
+          </InputFields>
+          <OutputFields>
+            <OutputField field="SpatialObj" IsAttribute="false" fieldType="SpatialObj" fieldSize="" xmlPath="ReturnInfo\Candidate\CommonFields" />
+          </OutputFields>
+          <MultipleMatchMode value="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxGeocoder" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="618" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\njewell\Desktop\UK Demo\Stores.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Stores.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Stores.csv" type="V_String" />
+            <Field name="Address" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Stores.csv" type="V_String" />
+            <Field name="City" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Stores.csv" type="V_String" />
+            <Field name="Postcode" size="254" source="File: C:\Users\njewell\Desktop\UK Demo\Stores.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="PortfolioPluginsGui.Geocoder.Geocoder">
+        <Position x="702" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputFields>
+            <Address>Address</Address>
+            <City>City</City>
+            <PostCode>Postcode</PostCode>
+            <SelectedGeocoder>SrcCentroidUK</SelectedGeocoder>
+          </InputFields>
+          <OutputFields>
+            <OutputField field="SpatialObj" IsAttribute="false" fieldType="SpatialObj" fieldSize="" xmlPath="ReturnInfo\Candidate\CommonFields" />
+          </OutputFields>
+          <MultipleMatchMode value="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxGeocoder" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="822" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Store_Number" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Left_SpatialObj" selected="True" rename="Customer" />
+                <SelectField field="Right_Address" selected="True" rename="Right_Address" />
+                <SelectField field="Right_Postcode" selected="True" rename="Right_Postcode" />
+                <SelectField field="Right_SpatialObj" selected="True" rename="Store" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+        <Position x="906" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputDistance value="True" />
+          <ReturnNearest value="False" />
+          <DistToInsideEdge value="False" />
+          <OutputDriveTimeAndDistance value="True" />
+          <SpatialObjSource>Customer</SpatialObjSource>
+          <SpatialObjDest>Store</SpatialObjDest>
+          <DriveTimeDataSet>Latest:TeleAtlas_UK</DriveTimeDataSet>
+          <AllowReverseRoute value="True" />
+          <MaxDriveTime value="30" />
+          <DriveDistanceOnly value="False" />
+          <OutputCardinalDirection value="True" />
+          <OutputDirectionDegrees value="False" />
+          <IsMetric value="False" />
+          <OutputUnits>Miles</OutputUnits>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings>
+        <Position x="1002" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Model Name">log1</Value>
+          <Value name="Y Var">Responder</Value>
+          <Value name="X Vars">Total Spend + Total Transactions + DriveTime</Value>
+          <Value name="Link">logit</Value>
+          <Value name="Use Weights">False</Value>
+          <Value name="Weight Vec">Customer_ID</Value>
+          <Value name="graph.resolution">1x</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Logistic_Regression.yxmc" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1002" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>Responder</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>No</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Responder] = "No"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings>
+        <Position x="1170" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="score field">Score</Value>
+          <Value name="is oversampled">False</Value>
+          <Value name="oversampled value" />
+          <Value name="original percent">2.0</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Customer_ID" source="R-DATA:" type="Int32" />
+            <Field name="Store_Number" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Customer.Segment" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Responder" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Name" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Address" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Postcode" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Total.Spend" source="R-DATA:" type="Double" />
+            <Field name="Total.Transactions" source="R-DATA:" type="Double" />
+            <Field name="ID" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Right_Address" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="City" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Right_Postcode" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="DistanceMiles" source="R-DATA:" type="Double" />
+            <Field name="Direction" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="DriveTime" source="R-DATA:" type="Double" />
+            <Field name="DriveDistanceMiles" source="R-DATA:" type="Double" />
+            <Field name="Score_No" source="R-DATA:" type="Double" />
+            <Field name="Score_Yes" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Score.yxmc" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1278" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Score_Yes" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Score_Yes - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1362" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields orderChanged="False" />
+          <Mode>First</Mode>
+          <N>100</N>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 100</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1470" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="42" MaxRecords="">C:\Users\njewell\Desktop\UK Demo\Demo.tde</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Demo.tde</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1470" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\njewell\Desktop\UK Demo\Demo.xlsx|Sheet1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Demo.xlsx
+Table=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="19" Connection="Left Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="19" Connection="Right Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Completed</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
